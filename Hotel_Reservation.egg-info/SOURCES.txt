@@ -1,8 +1,0 @@
-setup.py
-Hotel_Reservation.egg-info/PKG-INFO
-Hotel_Reservation.egg-info/SOURCES.txt
-Hotel_Reservation.egg-info/dependency_links.txt
-Hotel_Reservation.egg-info/top_level.txt
-config/__init__.py
-src/__init__.py
-utils/__init__.py

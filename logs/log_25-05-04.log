@@ -1,0 +1,40 @@
+2025-05-04 14:02:21,674 - INFO - Successfully read yaml file.
+2025-05-04 14:02:21,674 - INFO - Loading data from Raw Directory!
+2025-05-04 14:02:21,675 - INFO - Data loading started!
+2025-05-04 14:02:21,760 - INFO - Data loading successful!
+2025-05-04 14:02:21,760 - INFO - Data loading started!
+2025-05-04 14:02:21,784 - INFO - Data loading successful!
+2025-05-04 14:02:21,784 - INFO - data_preprocessing started!
+2025-05-04 14:02:21,784 - INFO - Dropping unnecessary columns!
+2025-05-04 14:02:21,789 - INFO - Dropping duplicate columns!
+2025-05-04 14:02:21,811 - INFO - Label encoding started!
+2025-05-04 14:02:21,835 - INFO - Label Mappings are: 
+2025-05-04 14:02:21,835 - INFO - type_of_meal_plan - {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+2025-05-04 14:02:21,835 - INFO - room_type_reserved - {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2025-05-04 14:02:21,835 - INFO - required_car_parking_space - {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-04 14:02:21,835 - INFO - market_segment_type - {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2025-05-04 14:02:21,835 - INFO - booking_status - {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2025-05-04 14:02:21,835 - INFO - repeated_guest - {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-04 14:02:21,835 - INFO - Skewness handling started!
+2025-05-04 14:02:21,842 - INFO - data_preprocessing started!
+2025-05-04 14:02:21,843 - INFO - Dropping unnecessary columns!
+2025-05-04 14:02:21,844 - INFO - Dropping duplicate columns!
+2025-05-04 14:02:21,853 - INFO - Label encoding started!
+2025-05-04 14:02:21,862 - INFO - Label Mappings are: 
+2025-05-04 14:02:21,862 - INFO - type_of_meal_plan - {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Not Selected': np.int64(2)}
+2025-05-04 14:02:21,862 - INFO - room_type_reserved - {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+2025-05-04 14:02:21,862 - INFO - required_car_parking_space - {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-04 14:02:21,862 - INFO - market_segment_type - {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+2025-05-04 14:02:21,862 - INFO - booking_status - {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+2025-05-04 14:02:21,862 - INFO - repeated_guest - {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+2025-05-04 14:02:21,862 - INFO - Skewness handling started!
+2025-05-04 14:02:21,867 - INFO - Handling data imbalancing!
+2025-05-04 14:02:22,263 - INFO - Handled data imbalancing!
+2025-05-04 14:02:22,266 - INFO - Handling data imbalancing!
+2025-05-04 14:02:22,308 - INFO - Handled data imbalancing!
+2025-05-04 14:02:22,308 - INFO - Starting feature selection.
+2025-05-04 14:02:27,266 - INFO - Feature selection is done successfully!
+2025-05-04 14:02:27,277 - INFO - Saving data in processed directory.
+2025-05-04 14:02:27,408 - INFO - Data is been saved in artifacts/processed\processed_train_data.csv
+2025-05-04 14:02:27,408 - INFO - Saving data in processed directory.
+2025-05-04 14:02:27,446 - INFO - Data is been saved in artifacts/processed\processed_test_data.csv

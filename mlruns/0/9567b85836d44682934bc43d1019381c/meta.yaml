@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/python/MLOps/Hotel-Reservation/mlruns/0/9567b85836d44682934bc43d1019381c/artifacts
+end_time: 1746566634571
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9567b85836d44682934bc43d1019381c
+run_name: invincible-elk-687
+run_uuid: 9567b85836d44682934bc43d1019381c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746566316900
+status: 3
+tags: []
+user_id: Yash

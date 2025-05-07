@@ -30,8 +30,6 @@ def predict():
         0: "This customer will not cancel this booking.",
         1: "This customer is likely to cancel this booking."
     }
-    print(prediction)
-
     return jsonify({"prediction": prediction_mapping[prediction]}), 200
 
 

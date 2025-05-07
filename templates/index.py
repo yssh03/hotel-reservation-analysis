@@ -70,7 +70,6 @@ with col5:
             "room_type_reserved": room_type_reserved_mapped_value[room_type_reserved],
             "avg_price_per_room": avg_price_per_room
         }
-        print(data)
         response = requests.post(
             "http://127.0.0.1:5001/predict", json=data)
         st.write(f"##### {response.json()["prediction"]}")

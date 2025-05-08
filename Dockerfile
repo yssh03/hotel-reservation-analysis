@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy source code
-COPY pyproject.toml setup.cfg setup.py requirements.txt ./
+COPY setup.py requirements.txt ./
 
 # Install Python dependencies
 RUN pip install --upgrade pip && pip install --no-cache-dir -e .

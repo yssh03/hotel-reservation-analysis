@@ -1,8 +1,8 @@
 pipeline{
     agent any 
 
-    environment = {
-        VENV_DIR = "venv"
+    environment  {
+        VENV_DIR = 'venv'
     }
 
     stages{
@@ -26,7 +26,7 @@ pipeline{
 
                     pip install --upgrade pip
                     pip install -e .
-                    
+
                     '''
                 }
             }

@@ -1,22 +1,28 @@
-from python:slim
+FROM python:slim
 
-ENV PYTHONDONTWRITEBYTECODE = 1 \
-    PYTHONUNBUFFERED = 1
+# Use key=value format with no spaces around '=' for ENV
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN apt-get update  && app-get-install --y --no-install-recommends \
+# Install dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
-    && apt-get-clean \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-
+# Copy source code
 COPY . .
 
-RUN pip install --no-cache-dir -e .
+# Install Python dependencies
+RUN pip install --upgrade pip && pip install --no-cache-dir -e .
 
-RUN python pipeline/training_pipeline.py
+# Optional: Run training during build (not typical for Docker)
+# Consider moving this to entrypoint if it should run dynamically
+# RUN python pipeline/training_pipeline.py
 
 EXPOSE 5000
 
+# Start the application
 CMD ["python", "app.py"]

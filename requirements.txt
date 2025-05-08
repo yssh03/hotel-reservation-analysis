@@ -38,7 +38,6 @@ graphql-core==3.2.6
 graphql-relay==3.2.0
 greenlet==3.2.1
 h11==0.16.0
--e git+https://github.com/yssh03/hotel-reservation-analysis.git@671c831fc4e8de887adf23f2312a42f750a57d96#egg=Hotel_Reservation
 htmlmin==0.1.12
 idna==3.10
 ImageHash==4.3.1

@@ -36,7 +36,7 @@ pipeline{
                 }
             }
         }
-    }
+    
 
     stage('Authenticate Docker to AWS ECR') {
             steps {
@@ -76,4 +76,5 @@ pipeline{
             }
         }
     
+}
 }

@@ -13,17 +13,17 @@ for folder in folder_list:
     else:
         os.makedirs(folder, exist_ok=True)
 
-# with open(os.path.join(os.getcwd(), "logger.py"), "w"):
-#     pass
+with open(os.path.join(os.getcwd(), "logger.py"), "w"):
+    pass
 
-# with open("requirements.txt") as txt:
-#     requirements = txt.read().splitlines()
+with open("requirements.txt") as txt:
+    requirements = txt.read().splitlines()
 
-# setup(
-#     name="Hotel Reservation",
-#     version="0.1",
-#     author="Yash Patel",
-#     packages=find_packages(),
-#     install_requires=requirements
+setup(
+    name="Hotel Reservation",
+    version="0.1",
+    author="Yash Patel",
+    packages=find_packages(),
+    install_requires=requirements
 
-# )
+)

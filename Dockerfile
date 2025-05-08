@@ -1,4 +1,4 @@
-FROM python:slim
+FROM python:3.11-slim
 
 # Use key=value format with no spaces around '=' for ENV
 ENV PYTHONDONTWRITEBYTECODE=1 \

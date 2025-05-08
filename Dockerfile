@@ -13,14 +13,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy source code
-COPY . .
+COPY pyproject.toml setup.cfg setup.py requirements.txt ./
 
 # Install Python dependencies
 RUN pip install --upgrade pip && pip install --no-cache-dir -e .
 
+COPY . .
 # Optional: Run training during build (not typical for Docker)
 # Consider moving this to entrypoint if it should run dynamically
-# RUN python pipeline/training_pipeline.py
+RUN python pipeline/training_pipeline.py
+
 
 EXPOSE 5000
 

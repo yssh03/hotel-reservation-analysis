@@ -36,45 +36,52 @@ pipeline{
                 }
             }
         }
-    
-
-    stage('Authenticate Docker to AWS ECR') {
+    stage('Authenticate Docker with AWS ECR') {
             steps {
                 script {
-                    withCredentials([[
-                    $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialsId: 'aws-credentials'
-                    ]]) 
-                    echo 'Authenticating Docker to AWS ECR'
+                    echo 'Authenticating Docker with AWS ECR'
                     sh '''
-                        aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_URI}
+                    aws --version
+                    aws ecr get-login-password --region ${AWS_REGION} | \
+                        docker login --username AWS --password-stdin ${ECR_URI}
                     '''
                 }
             }
         }
 
-        stage('Build Docker image') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     echo 'Building Docker image'
                     sh '''
-                        docker build -t ${ECR_REPO_NAME}:${IMAGE_TAG} .
-                        docker tag ${ECR_REPO_NAME}:${IMAGE_TAG} ${ECR_URI}:${IMAGE_TAG}
+                    docker build -t ${ECR_REPO_NAME}:${IMAGE_TAG} .
                     '''
                 }
             }
         }
 
-        stage('Push Docker image to ECR') {
+        stage('Tag Docker Image') {
             steps {
                 script {
-                    echo 'Pushing Docker image to ECR'
+                    echo 'Tagging Docker image for ECR'
                     sh '''
-                        docker push ${ECR_URI}:${IMAGE_TAG}
+                    docker tag ${ECR_REPO_NAME}:${IMAGE_TAG} ${ECR_URI}:${IMAGE_TAG}
                     '''
                 }
             }
         }
-    
-}
+
+        stage('Push Docker Image to AWS ECR') {
+            steps {
+                script {
+                    echo 'Pushing Docker image to AWS ECR'
+                    sh '''
+                    docker push ${ECR_URI}:${IMAGE_TAG}
+                    '''
+                }
+            }
+        }
+
+            
+    }
 }

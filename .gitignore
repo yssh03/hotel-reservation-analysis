@@ -180,3 +180,5 @@ venv/
 logs/
 mlruns/
 Hotel_Reservation.egg-info/
+
+.env

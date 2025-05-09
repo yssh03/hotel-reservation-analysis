@@ -6,7 +6,12 @@ from src.logger import get_logger
 from src.custom_exceptions import CustomException
 from utils.common_functions import read_yaml
 from config.path_config import *
+from dotenv import load_dotenv
 
+load_dotenv()
+
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 logger = get_logger(__name__)
 
 
@@ -22,7 +27,9 @@ class DataIngestion:
 
     def download_csv_from_aws(self):
         try:
-            s3 = boto3.client("s3")
+            session = boto3.Session(
+                aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+            s3 = session.client("s3")
             s3.download_file(self.bucket_name,
                              self.bucket_file_name, RAW_FILE_PATH)
             logger.info("File has been loaded successfully!!")

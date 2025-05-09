@@ -1,7 +1,4 @@
-from src.custom_exceptions import CustomException
-import sys
-try:
-    print(10/0)
-
-except Exception as e:
-    raise CustomException("Not possible", sys)
+import os
+from dotenv import load_dotenv
+load_dotenv()
+print(os.getenv("AWS_ACCESS_KEY_ID"))

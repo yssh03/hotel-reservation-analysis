@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY setup.py requirements.txt ./
 
 # Install Python dependencies
-RUN pip install --upgrade pip && pip install --no-cache-dir -e .
+RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -e .
 
 COPY . .
 # Optional: Run training during build (not typical for Docker)

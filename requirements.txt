@@ -5,13 +5,8 @@ docker
 Flask
 flask-cors
 imbalanced-learn
-ipykernel
-ipython
-ipython_pygments_lexers
 joblib
 lightgbm
-matplotlib
-matplotlib-inline
 mlflow
 mlflow-skinny
 numpy
@@ -22,9 +17,7 @@ scikit-learn
 scipy
 seaborn
 setuptools
-sklearn-compat
 statsmodels
 streamlit
-tornado
 xgboost
 python-dotenv
